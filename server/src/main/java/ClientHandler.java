@@ -38,12 +38,12 @@ public class ClientHandler {
                         System.out.println("Сообщение от клиента: " + str);
                         if (str.indexOf("/end") == 0) {
                             break;
-//                        } else if (str.indexOf("/w") == 0) {
-//                            String[] msgDivide = str.split(" ");
-//                            String[] clearPrivateMsg = new String[msgDivide.length-2];
-//                            System.arraycopy(msgDivide, 2, clearPrivateMsg, 0, msgDivide.length-2);
-//                            String privateMsg = String.join(" ", clearPrivateMsg);
-//                            server.privatMsg(nickname, msgDivide[1], privateMsg);
+                        } else if (str.indexOf("/w") == 0) {
+                            String[] msgDivide = str.split(" ");
+                            String[] clearPrivateMsg = new String[msgDivide.length-2];
+                            System.arraycopy(msgDivide, 2, clearPrivateMsg, 0, msgDivide.length-2);
+                            String privateMsg = String.join(" ", clearPrivateMsg);
+                            server.privatMsg(nickname, msgDivide[1], privateMsg);
                         } else {
                             server.broadcastMsg(nickname + ": " + str);
                         }

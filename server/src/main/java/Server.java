@@ -40,16 +40,16 @@ public class Server {
         }
     }
 
-//    public void privatMsg(String nick, String name, String msg) {
-//        for (ClientHandler c : clients) {
-//            if (c.getNickname().equals(name)) {
-//                c.sendMsg(nick+": "+msg);
-//            }
-//        }
-//        for (ClientHandler c : clients) {
-//            if (c.getNickname().equals(nick)) {
-//                c.sendMsg(nick+": "+msg);
-//            }
-//        }
-//    }
+    public void privatMsg(String nick, String name, String msg) {
+        for (ClientHandler c : clients) {
+            if (c.getNickname().equals(name)) {
+                c.sendMsg(nick+": "+msg);
+            }
+        }
+        for (ClientHandler c : clients) {
+            if (c.getNickname().equals(nick)) {
+                c.sendMsg(nick+": "+msg);
+            }
+        }
+    }
 }
